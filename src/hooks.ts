@@ -48,14 +48,14 @@ export const useStyle = (w : number, h : number, scale : number) => {
     const x : number = maxX * scale 
     const size : number = Math.min(w, h) / 15 
     return {
-        parentStyle() {
+        parentStyle() : CSSProperties {
             const left : string = `${x}px`
             return {
                 position,
                 left 
             }
         },
-        parentHamburgStyle() {
+        parentHamburgStyle() : CSSProperties {
             return {
                 position, 
                 top : `${size / 2}px`
@@ -72,7 +72,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
                 transform
             }
         },
-        sideNavStyle() {
+        sideNavStyle() : CSSProperties {
             const zIndex : number = 1000
             const boxShadow = `10px 10px rgba(0, 0, 0, 0.5)`
             const left : string = `${-x + x * scale}px`
