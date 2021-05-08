@@ -26,10 +26,11 @@ const HamburgIcon : React.FC<SideNavProps> = (props : SideNavProps) => {
 }
 
 const SideNav : React.FC<SideNavProps> = (props : SideNavProps) => {
-    const {parentStyle, sideNavStyle, headerStyle} = useStyle(props.w, props.h, props.scale)
+    const {parentStyle, sideNavStyle, headerStyle, overlayStyle} = useStyle(props.w, props.h, props.scale)
     return (
         <React.Fragment>
             <div style = {headerStyle()}></div>
+            <div style = {overlayStyle()}></div>
             <div style = {parentStyle()}>
                 <div style = {sideNavStyle()}>
                 </div>
