@@ -1,5 +1,6 @@
 import React from 'react'
 import {useStyle} from './hooks'
+import withContext from './withContext'
 
 interface SideNavProps {
     w : number, 
@@ -35,4 +36,4 @@ const SideNav : React.FC<SideNavProps> = (props : SideNavProps) => {
     )
 }
 
-export default SideNav
+export default withContext(SideNav)
